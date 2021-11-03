@@ -1,0 +1,14 @@
+dash
+dash_core_components
+dash_html_components
+plotly
+pandas
+numpy
+gunicorn
+yahoo_fin.stock_info
+yfinance
+datetime
+time
+mplfinance
+sys
+yahoo_finance_api2
