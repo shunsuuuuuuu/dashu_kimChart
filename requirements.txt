@@ -7,7 +7,5 @@ numpy
 gunicorn
 yahoo_fin
 yfinance
-time
-mplfinance
 sys
 yahoo_finance_api2
