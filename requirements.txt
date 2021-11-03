@@ -5,7 +5,7 @@ plotly
 pandas
 numpy
 gunicorn
-yahoo_fin.stock_info
+yahoo_fin
 yfinance
 datetime
 time
