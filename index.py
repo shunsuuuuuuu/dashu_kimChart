@@ -6,19 +6,19 @@ Created on Sun Oct 31 23:14:35 2021
 """
 
 #! pip install yahoo_fin
-from googletrans import Translator
+#from googletrans import Translator
 import yahoo_fin.stock_info as si
 # import fix_yahoo_finance as yf
 import yfinance as yf
 import pandas as pd
-import datetime
-import matplotlib.pyplot as plt
+#import datetime
+#import matplotlib.pyplot as plt
 import numpy as np
-import time
-import mplfinance as mpf
-from datetime import timedelta
+#import time
+#import mplfinance as mpf
+#from datetime import timedelta
 from plotly.subplots import make_subplots
-import sys
+#import sys
 import plotly.express as px
 from yahoo_finance_api2 import share
 from yahoo_finance_api2.exceptions import YahooFinanceError
@@ -27,13 +27,9 @@ import dash
 import dash_core_components as dcc 
 import dash_html_components as html  
 import plotly.graph_objs as go 
-import json 
-import requests
-import os
-import glob
 import yahoo_fin.stock_info as si
-from datetime import datetime as dt
-from matplotlib import dates
+#from datetime import datetime as dt
+#from matplotlib import dates
 # %matplotlib inline
 from dash.dependencies import Input, Output, State
 import plotly.io as pio
@@ -186,13 +182,10 @@ def mk_Teckdata(ticker,period_num):
     my_share = share.Share(ticker)
     symbol_data = None
      
-    try:
-        symbol_data = my_share.get_historical(
-            share.PERIOD_TYPE_MONTH, period_num,
-            share.FREQUENCY_TYPE_DAY, 1)
-    except YahooFinanceError as e:
-        print(e.message)
-        sys.exit(1)
+    symbol_data = my_share.get_historical(
+        share.PERIOD_TYPE_MONTH, period_num,
+        share.FREQUENCY_TYPE_DAY, 1)
+
     
     df = pd.DataFrame(symbol_data)
     df["datetime"] = pd.to_datetime(df.timestamp, unit="ms")
