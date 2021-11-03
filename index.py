@@ -926,4 +926,5 @@ def update_output(slct_stock,hoverData):
 
 
 if __name__=="__main__":
-    app.run_server(debug=False, use_reloader=False)
+    #app.run_server(debug=False, use_reloader=False)
+    app.run_server()
